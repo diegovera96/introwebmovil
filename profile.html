@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página del perfil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container border border-primary">
-        <div class="row mt-4">
-            <div class="col-md-5">
-                <div class="card" style="width: 100%;">
-                    <div class="card-body">
-                      <h5 class="card-title">Diego Vera Santis</h5>
-                      <p class="card-text">Estudiante de Ing. Civil en Computación e Informática.</p>
-                    </div>
-                  </div>
+  <div class="container" style="margin-top: 5px;">
+    <div class="row mt-4 bg-body-secondary">
+        <div class="col-md-4" style="padding: 2px; margin-left: 5px;">
+            <div class="d-flex align-items-center">
+                <div class="col-md-3">
+                    <img src="assets/blank-profile-picture-973460_1280.webp" class="img-fluid" style="width: 100px !important; height: 100px !important; max-width: none !important;" alt="...">
+                </div>
+                <div style="margin-left: 45px;">
+                    <h5 class="p-10" style="margin-bottom: -3px;">Diego Vera Santis</h5>
+                    <p class="card-text d-inline">Estudiante de Ing. Civil en Computación e Informática.</p>
+                </div>
             </div>
         </div>
-        <div class="row mt-4">
+    </div>
+        <div class="row mt-4" style="margin-left: 5px;">
             <h3>Datos personales</h3>
-            <table class="table">
+            <table class="table" style="max-width: 90%; margin-right: 0; margin-left: 5px">
                 <thead>
                   <tr>
                     <th scope="col">Edad</th>
@@ -34,48 +37,122 @@
                   <tr>
                     <td>27</td>
                     <td>Antofagasta</td>
-                    <td>@diego.vera@alumnos.ucn.cl</td>
+                    <td>diego.vera@alumnos.ucn.cl</td>
                   </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="row">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
             <h3>Intereses</h3>
-            <ol class="list-group list-group-numbered list-group-item-info col-md-2">
-                <li class="list-group-item">Tecnología</li>
-                <li class="list-group-item">Animales</li>
-                <li class="list-group-item">Modelado</li>
-              </ol>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  Tecnología
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Siempre me ha gustado temas tecnológicos en especial en las computadoras, lo que tiene que ver con hardware, modding, programas y videojuegos.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  Animales
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Gran parte influenciado por el contenido que veía desde pequeño en la televisión como lo son los canales de Discovery Channel o Animal Planet me hizo tener un interés en la naturaleza y los animales.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  Modelado
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Este es un interés que surgió hace muy poco y que sin embargo me dio bastante satisfacción al hacer modelado 3D, con la ayuda de mi tablet me he estado familiarizando con este mundo y espero complementarlo con software de computadora.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="row">
             <h3>Herramientas tecnológicas</h3>
-            <table class="table table-striped table-success">
+              <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Tecnología</th>
-                    <th scope="col">Lenguaje</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo de tecnología</th>
+                    <th scope="col">Nivel</th>
                     <th scope="col">Finalidad</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider">
                   <tr>
                     <th scope="row">1</th>
                     <td>Laravel</td>
-                    <td>PHP</td>
+                    <td>Framework</td>
+                    <td>Medio</td>
                     <td>Desarrollo web</td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td>GitHub</td>
-                    <td>Multilenguaje</td>
+                    <td>Alojamiento de proyectos</td>
+                    <td>Medio</td>
                     <td>Plataforma para construir, escalar y desplegar software de forma segura</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Vue.js</td>
+                    <td>Framework</td>
+                    <td>Bajo</td>
+                    <td>FrontEnd</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Express.js</td>
+                    <td>Framework</td>
+                    <td>Bajo</td>
+                    <td>BackEnd</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Ionics</td>
+                    <td>Framework</td>
+                    <td>Bajo</td>
+                    <td>Aplicación Móvil</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>PowerBi</td>
+                    <td>Software</td>
+                    <td>Medio</td>
+                    <td>Análisis de datos</td>
                   </tr>
                 </tbody>
               </table>
         </div>
+        
+        <footer class="text-center text-white" style="background-color: #f1f1f1;">
+          <div class="container pt-4">
+            <section class="mb-4">
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/alek.dsadasxf"><?xml version="1.0" ?><svg width="25" height="25" version="1.1" viewBox="0 0 60 60" width="60px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><defs/><g fill="none" fill-rule="evenodd" id="black" stroke="none" stroke-width="1"><g id="facebook"><path d="M30,60 C46.5685433,60 60,46.5685433 60,30 C60,13.4314567 46.5685433,0 30,0 C13.4314567,0 0,13.4314567 0,30 C0,46.5685433 13.4314567,60 30,60 Z" fill="#000000" id="Facebook"/><path d="M25.4622239,47.314313 L25.4622239,29.9989613 L21.9432889,29.9989612 L21.9432889,24.2593563 L25.4622239,24.2593563 L25.4622239,20.7883864 C25.4622239,16.1066422 26.8619948,12.730619 31.9881023,12.730619 L38.0863595,12.730619 L38.0863595,18.45844 L33.7922546,18.45844 C31.6418944,18.45844 31.1518737,19.8873763 31.1518737,21.3837609 L31.1518737,24.2593553 L37.7694231,24.2593558 L36.8661728,29.9989613 L31.1518737,29.9989613 L31.1518737,47.3143123 L25.4622239,47.314313 Z" fill="#FFFFFF"/></g></g></svg></a>
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/holo_diego/"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg width="25" height="25" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,0c141.29,0 256,114.71 256,256c0,141.29 -114.71,256 -256,256c-141.29,0 -256,-114.71 -256,-256c0,-141.29 114.71,-256 256,-256Zm0,96c-43.453,0 -48.902,0.184 -65.968,0.963c-17.03,0.777 -28.661,3.482 -38.839,7.437c-10.521,4.089 -19.444,9.56 -28.339,18.455c-8.895,8.895 -14.366,17.818 -18.455,28.339c-3.955,10.177 -6.659,21.808 -7.437,38.838c-0.778,17.066 -0.962,22.515 -0.962,65.968c0,43.453 0.184,48.902 0.962,65.968c0.778,17.03 3.482,28.661 7.437,38.838c4.089,10.521 9.56,19.444 18.455,28.34c8.895,8.895 17.818,14.366 28.339,18.455c10.178,3.954 21.809,6.659 38.839,7.436c17.066,0.779 22.515,0.963 65.968,0.963c43.453,0 48.902,-0.184 65.968,-0.963c17.03,-0.777 28.661,-3.482 38.838,-7.436c10.521,-4.089 19.444,-9.56 28.34,-18.455c8.895,-8.896 14.366,-17.819 18.455,-28.34c3.954,-10.177 6.659,-21.808 7.436,-38.838c0.779,-17.066 0.963,-22.515 0.963,-65.968c0,-43.453 -0.184,-48.902 -0.963,-65.968c-0.777,-17.03 -3.482,-28.661 -7.436,-38.838c-4.089,-10.521 -9.56,-19.444 -18.455,-28.339c-8.896,-8.895 -17.819,-14.366 -28.34,-18.455c-10.177,-3.955 -21.808,-6.66 -38.838,-7.437c-17.066,-0.779 -22.515,-0.963 -65.968,-0.963Zm0,28.829c42.722,0 47.782,0.163 64.654,0.933c15.6,0.712 24.071,3.318 29.709,5.509c7.469,2.902 12.799,6.37 18.397,11.969c5.6,5.598 9.067,10.929 11.969,18.397c2.191,5.638 4.798,14.109 5.509,29.709c0.77,16.872 0.933,21.932 0.933,64.654c0,42.722 -0.163,47.782 -0.933,64.654c-0.711,15.6 -3.318,24.071 -5.509,29.709c-2.902,7.469 -6.369,12.799 -11.969,18.397c-5.598,5.6 -10.928,9.067 -18.397,11.969c-5.638,2.191 -14.109,4.798 -29.709,5.509c-16.869,0.77 -21.929,0.933 -64.654,0.933c-42.725,0 -47.784,-0.163 -64.654,-0.933c-15.6,-0.711 -24.071,-3.318 -29.709,-5.509c-7.469,-2.902 -12.799,-6.369 -18.398,-11.969c-5.599,-5.598 -9.066,-10.928 -11.968,-18.397c-2.191,-5.638 -4.798,-14.109 -5.51,-29.709c-0.77,-16.872 -0.932,-21.932 -0.932,-64.654c0,-42.722 0.162,-47.782 0.932,-64.654c0.712,-15.6 3.319,-24.071 5.51,-29.709c2.902,-7.468 6.369,-12.799 11.968,-18.397c5.599,-5.599 10.929,-9.067 18.398,-11.969c5.638,-2.191 14.109,-4.797 29.709,-5.509c16.872,-0.77 21.932,-0.933 64.654,-0.933Zm0,49.009c-45.377,0 -82.162,36.785 -82.162,82.162c0,45.377 36.785,82.162 82.162,82.162c45.377,0 82.162,-36.785 82.162,-82.162c0,-45.377 -36.785,-82.162 -82.162,-82.162Zm0,135.495c-29.455,0 -53.333,-23.878 -53.333,-53.333c0,-29.455 23.878,-53.333 53.333,-53.333c29.455,0 53.333,23.878 53.333,53.333c0,29.455 -23.878,53.333 -53.333,53.333Zm104.609,-138.741c0,10.604 -8.597,19.199 -19.201,19.199c-10.603,0 -19.199,-8.595 -19.199,-19.199c0,-10.604 8.596,-19.2 19.199,-19.2c10.604,0 19.201,8.596 19.201,19.2Z"/></svg></a>
+              <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/diegovera96"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg width="25" height="25" enable-background="new 0 0 512 512" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path clip-rule="evenodd" d="M296.133,354.174c49.885-5.891,102.942-24.029,102.942-110.192   c0-24.49-8.624-44.448-22.67-59.869c2.266-5.89,9.515-28.114-2.734-58.947c0,0-18.139-5.898-60.759,22.669   c-18.139-4.983-38.09-8.163-56.682-8.163c-19.053,0-39.011,3.18-56.697,8.163c-43.082-28.567-61.22-22.669-61.22-22.669   c-12.241,30.833-4.983,53.057-2.718,58.947c-14.061,15.42-22.677,35.379-22.677,59.869c0,86.163,53.057,104.301,102.942,110.192   c-6.344,5.452-12.241,15.873-14.507,30.387c-12.702,5.438-45.808,15.873-65.758-18.592c0,0-11.795-21.31-34.012-22.669   c0,0-22.224-0.453-1.813,13.592c0,0,14.96,6.812,24.943,32.653c0,0,13.6,43.089,76.179,29.48v38.543   c0,5.906-4.53,12.702-15.865,10.89C96.139,438.977,32.2,354.626,32.2,255.77c0-123.807,100.216-224.022,224.03-224.022   c123.347,0,224.023,100.216,223.57,224.022c0,98.856-63.946,182.754-152.828,212.688c-11.342,2.266-15.873-4.53-15.873-10.89   V395.45C311.1,374.577,304.288,360.985,296.133,354.174L296.133,354.174z M512,256.23C512,114.73,397.263,0,256.23,0   C114.73,0,0,114.73,0,256.23C0,397.263,114.73,512,256.23,512C397.263,512,512,397.263,512,256.23L512,256.23z" fill="#0D2636" fill-rule="evenodd"/></g></svg></a>
+            </section>
+          </div>
+        </footer>
     </div>
 </body>
 </html>
